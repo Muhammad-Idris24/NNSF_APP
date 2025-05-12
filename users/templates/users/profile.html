@@ -1,0 +1,64 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="content-section">
+        <!-- Top bar with Update Button -->
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="text-primary">Profile</h2>
+            <a href="{% url 'profile-update' %}" class="btn btn-outline-info">Update</a>
+        </div>
+
+        <hr>
+
+        <div class="media">
+            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+            </div>
+        </div>
+        
+        <hr>
+
+        <!-- Profile Information -->
+        <h4 class="text-primary">Profile Information</h4>
+        <p><strong>Bio:</strong> {{ user.profile.bio }}</p>
+        <p><strong>Location:</strong> {{ user.profile.location }}</p>
+        <p><strong>Birth Date:</strong> {{ user.profile.birth_date|default:"Not provided" }}</p>
+        <p><strong>Website:</strong> 
+            {% if user.profile.website %}
+                <a href="{{ user.profile.website }}" target="_blank">{{ user.profile.website }}</a>
+            {% else %}
+                Not provided
+            {% endif %}
+        </p>
+
+        <hr>
+
+        <!-- Social Media Links with Icons -->
+        <h4 class="text-primary">Social Media</h4>
+        <div class="social-links">
+            {% if user.profile.facebook %}
+                <a href="{{ user.profile.facebook }}" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+            {% endif %}
+            {% if user.profile.twitter %}
+                <a href="{{ user.profile.twitter }}" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            {% endif %}
+            {% if user.profile.instagram %}
+                <a href="{{ user.profile.instagram }}" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            {% endif %}
+            {% if user.profile.linkedin %}
+                <a href="{{ user.profile.linkedin }}" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,185 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+    <div class="container py-5">
+        <!-- Hero Section -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h1 class="display-4 font-weight-bold text-primary">About NNSF - GAMJI</h1>
+                <p class="lead text-muted">Celebrating Northern Heritage, Fostering Academic Excellence</p>
+            </div>
+        </div>
+
+        <!-- Mission Statement -->
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="card shadow-sm border-0 p-4">
+                    <p class="font-size-lg">
+                        Welcome to <strong class="text-primary">NNFS - Gamji</strong>, a vibrant online platform designed exclusively for 
+                        students of the University of Abuja and beyond! Our mission is to celebrate the rich cultural 
+                        diversity of Northern Nigeria while fostering academic excellence, collaboration, and community 
+                        among students.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- President's Message -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <img src="{% static 'blog/images/president.jpg' %}" alt="President's Photo" class="rounded-circle img-fluid shadow">
+                <h4 class="mt-3 mb-0">Comrade Murtala Muhammad Sadiq</h4>
+                <p class="text-muted">President, NNSF - GAMJI</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="card border-left-primary shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-primary">A Message From Our President</h3>
+                        <blockquote class="blockquote">
+                            <p class="font-italic">"At NNSF - GAMJI, we are building more than just a student organization - we're creating a movement that bridges our rich cultural heritage with modern academic excellence. Our platform serves as a home away from home for Northern students, providing both cultural connection and educational support. I invite you to join us in this journey of celebrating who we are while striving for who we can become."</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Sections -->
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <!-- Celebrating Culture Section -->
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="text-primary mb-4">Celebrating Northern Nigerian Cultures</h2>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>
+                                    Northern Nigeria is a tapestry of over 100 ethnic groups, each with its unique traditions, 
+                                    languages, music, and festivals. At Gamji, we provide a space to explore and 
+                                    showcase these cultures. From the colorful Durbar festivals of the Hausa to the rhythmic Swange 
+                                    dances of the Tiv, and the intricate pottery of the Gbagyi, our platform highlights the beauty 
+                                    and depth of Northern Nigerian heritage.
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                               <img src="{% static 'blog/images/culture1.jpg' %}" alt="Cultural Festival" class="img-fluid rounded">
+                               <img src="{% static 'blog/images/culture2.jpg' %}" alt="Cultural Festival" class="img-fluid rounded">
+                               <img src="{% static 'blog/images/culture3.jpg' %}" alt="Cultural Festival" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Excellence Section -->
+                <div class="card mb-4 border-0 shadow-sm bg-light">
+                    <div class="card-body">
+                        <h2 class="text-primary mb-4">Academic Excellence</h2>
+                        <p>
+                            While we celebrate our cultural roots, we are equally committed to supporting your academic 
+                            journey. Gamji offers resources tailored to students of the University of Abuja, 
+                            including study materials, discussion forums, and mentorship programs.
+                        </p>
+                        <div class="row mt-3">
+                            <div class="col-md-4 mb-3">
+                                <div class="text-center p-3 bg-white rounded shadow-sm">
+                                    <i class="fas fa-book-open fa-3x text-primary mb-3"></i>
+                                    <h5>Study Materials</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="text-center p-3 bg-white rounded shadow-sm">
+                                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                                    <h5>Discussion Forums</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <div class="text-center p-3 bg-white rounded shadow-sm">
+                                    <i class="fas fa-hands-helping fa-3x text-primary mb-3"></i>
+                                    <h5>Mentorship Programs</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Community Section -->
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="text-primary mb-4">Community and Networking</h2>
+                        <p>
+                            Gamji is more than just a forum—it's a community. Here, you can join cultural 
+                            groups, participate in events, and share your voice through blogs, stories, and videos.
+                        </p>
+                        <div class="mt-4">
+                            <img src="{% static 'blog/images/community.jpg' %}" alt="Community Event" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Join Us Section -->
+                <div class="card mb-4 border-0 shadow-sm bg-primary text-white">
+                    <div class="card-body">
+                        <h2 class="mb-4">Why Join Us?</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="p-3 bg-white text-dark rounded shadow-sm h-100">
+                                    <h5 class="text-primary">Cultural Pride</h5>
+                                    <p>Showcase and learn about the diverse cultures of Northern Nigeria.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="p-3 bg-white text-dark rounded shadow-sm h-100">
+                                    <h5 class="text-primary">Academic Support</h5>
+                                    <p>Access tools and resources to help you succeed in your studies.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="p-3 bg-white text-dark rounded shadow-sm h-100">
+                                    <h5 class="text-primary">Networking Opportunities</h5>
+                                    <p>Build lasting connections with students, alumni, and professionals.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="p-3 bg-white text-dark rounded shadow-sm h-100">
+                                    <h5 class="text-primary">Safe Space</h5>
+                                    <p>A respectful and inclusive environment where everyone's voice is valued.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final CTA -->
+                <div class="text-center my-5">
+                    <p class="lead">
+                        At Gamji, we believe that embracing your cultural heritage and excelling academically 
+                        go hand in hand. Join us today to be part of a community that celebrates who you are 
+                        and supports where you're going.
+                    </p>
+                    <a href="{% url 'blog-home' %}" class="btn btn-primary btn-lg px-5 py-3">Get Started Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .bg-light {
+            background-color: #f8f9fa!important;
+        }
+        .text-primary {
+            color:rgb(52, 220, 139)!important;
+        }
+        .btn-primary {
+            background-color:rgb(52, 220, 139);
+            border-color:rgb(52, 220, 139);
+        }
+        .border-left-primary {
+            border-left: 4px solidrgb(52, 220, 139)!important;
+        }
+    </style>
+{% endblock content %}
