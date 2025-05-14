@@ -12,7 +12,7 @@ if os.environ.get('DEBUG') == 'True':
 
 # Allow both Render's URL and localhost (for testing)
 ALLOWED_HOSTS = [
-    'your-app-name.onrender.com',  # Your Render URL
+    'nnsf-app.onrender.com',  # Your Render URL
     'localhost',  # For local testing
     '127.0.0.1',   # For local testing
 ]
