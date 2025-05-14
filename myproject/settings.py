@@ -7,7 +7,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'default-secret-key')
 
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+if os.environ.get('DEBUG') == 'True':
+    DEBUG = True
+
+# Allow both Render's URL and localhost (for testing)
+ALLOWED_HOSTS = [
+    'your-app-name.onrender.com',  # Your Render URL
+    'localhost',  # For local testing
+    '127.0.0.1',   # For local testing
+]
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
@@ -109,10 +117,9 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # For production on Render
-if not DEBUG:
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
-    SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
 
 # Logging configuration
 LOG_DIR = BASE_DIR / 'logs'
